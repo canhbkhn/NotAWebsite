@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test from upload File</title>
+</head>
+<body>
+    <form action="upload.php" method="post"
+        enctype="multipart/form-data">
+        <h2>Upload file </h2>
+        <label for="FileSelect">FileName:</label>
+        <input type="file" name="photo" id="FileSelect">
+        <input type="submit" name="submit" value="Upload">
+        <p><strong>Note:</strong>Only .jpg, .jpeg, .gif, .png
+            format and allowed to upload max size is 5MB.</p>
+    </form>
+</body>
+</html>

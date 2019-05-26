@@ -87,7 +87,33 @@
     </y>
 
 </ul>
+<p>Latitude: <span id = "lat"></span></br> </p>
+<p>Longitude: <span id = "lon"></span></br> </p>
 
+<script>
+    let pos = {
+        lat: 0,
+        lon: 45
+    };
+    console.log(pos);
+
+    url_path = 'https://api.wheretheiss.at/v1/satellites/25544';
+    getISS(url_path);
+
+    async function getISS(url_path)
+    {
+        const response = await fetch(url_path);
+        const data = await response.json();
+
+        const {latitude, longitude} = data;
+
+        document.getElementById('lat').textContent = latitude;
+        document.getElementById('lon').textContent = longitude;
+
+    }
+</script>
 
 </body>
+
+
 </html>
